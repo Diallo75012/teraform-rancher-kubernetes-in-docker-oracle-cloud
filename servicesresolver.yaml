@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: graf
+spec:
+  type: ExternalName
+  externalName: rancher-monitoring-grafana.cattle-monitoring-system.svc.cluster.local
+  ports:
+  - port: 80
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: prom
+spec:
+  type: ExternalName
+  externalName: rancher-monitoring-prometheus.cattle-monitoring-system.svc.cluster.local
+  ports:
+  - port: 9090
